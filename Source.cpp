@@ -4,18 +4,23 @@ using namespace std;
 
 int main() {
 
-	Broek b(3, 1);
-	Broek b2(2, 1);
+	Broek b(30, 78);
+	Broek b2(12, 66);
 	Broek res = b / b2;
 
 	
-	cout << b.getTaeller() << "/" << b2.getTaeller() << "=" << res.getTaeller() <<endl;
-	cout << b.getNaevner() << " " << b2.getNaevner() << "=" << res.getNaevner() <<endl;
+	cout << "Broek 1: " << b.getTaeller() << "/" << b.getNaevner() << endl;
+	cout << "Broek 2: " << b2.getTaeller() << "/" << b2.getNaevner() << endl;
 
+	cout << "+ = " << (b + b2).getTaeller() << "/"<< (b + b2).getNaevner() << endl;
+	cout << "- = " << (b - b2).getTaeller() << "/" << (b - b2).getNaevner() << endl;
+	cout << "* = " << (b * b2).getTaeller() << "/" << (b * b2).getNaevner() << endl;
+	cout << "/ = " << (b / b2).getTaeller() << "/" << (b / b2).getNaevner() << endl;
 
-	
-
-	
+	cout << "+ = " << (b.adder(b2)).getTaeller() << "/" << (b + b2).getNaevner() << endl;
+	cout << "- = " << (b.subtraher(b2)).getTaeller() << "/" << (b - b2).getNaevner() << endl;
+	cout << "* = " << (b.multiplicer(b2)).getTaeller() << "/" << (b * b2).getNaevner() << endl;
+	cout << "/ = " << (b.divider( b2)).getTaeller() << "/" << (b / b2).getNaevner() << endl;
 
 
 }
